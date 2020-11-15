@@ -1,0 +1,32 @@
+
+{% extends "layout.html" %}
+
+{% block title %}
+    Sign Up
+{% endblock %}
+
+{% block main %}
+<div class="row" id="signup">
+    <div class="col align-self-center">
+        <div class="card">
+            <div class="card-header">Sign Up</div>
+            <div class="card-body">
+                <form action="/signup" method="post">
+                    <div class="form-group">
+                        <input autocomplete="off" autofocus class="form-control" name="username" placeholder="Username" type="text">
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" name="password" placeholder="Password" type="password">
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" name="confirmation" placeholder="Confirm password" type="password">
+                    </div>
+                    <button class="btn btn-primary" type="submit">Sign Up</button>
+                    <p class="small">Already have an account? <a href="/login">Log in</a> here</p>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

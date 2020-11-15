@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+body {
+    color:#212529;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";;
+}
+
+a {
+    color: #57A716;
+}
+
+a:hover {
+    color: #36680D;
+    text-decoration:none;
+}
+
+.btn, .btn-primary {
+    background-color: #57A716;
+    border-color:#57A716;
+}
+
+.btn:hover,  .btn-primary:hover {
+    background-color:#36680D !important;
+    border-color:#36680D !important;
+}
+
+.btn:active, .btn-primary:active {
+    background-color:#D6FDB6 !important;
+    border-color:#D6FDB6 !important;
+}
+
+.btn:focus, .btn-primary:focus {
+    background-color:#57A716 !important;
+    border-color:#57A716 !important;
+}
+
+.list-group-item.active {
+    background-color:#57A716;
+    border-color:#57A716;
+}
+
+.list-group {
+    width:450px;
+    margin: 0 auto;
+}
+
+nav {
+    background-color:#57A716;
+    border-bottom: 1px #C6C5C5 solid;
+}
+
+nav a {
+    color:#ffffff;
+}
+
+nav a:hover {
+    color:#D6FDB6;
+}
+
+a.navbar-brand:hover {
+    color:#ffffff;
+}
+
+nav .navbar-brand
+{
+    /* size for brand */
+    font-size: xx-large;
+    font-family:'Varela Round';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+}
+
+span .title {
+    color: #595A5C;
+    vertical-align:middle;
+    display:flex;
+    align-items:center;
+}
+
+#logoicon {
+    margin-bottom:0.5rem;
+    margin-left:2rem;
+}
+
+.breadcrumbs {
+    border:none;
+    background-color:#E8ECEF;
+}
+
+
+.breadcrumb-item a {
+    color:#57A716;
+    padding-left:2rem;
+}
+
+.breadcrumb-item a:hover {
+    color:#36680D;
+}
+
+
+
+main .form-control
+{
+    /* center form controls */
+    display: inline-block;
+
+    /* override Bootstrap's 100% width for form controls */
+    width: auto;
+}
+
+main
+{
+    /* scroll horizontally as needed */
+    overflow-x: auto;
+
+    /* center contents */
+    text-align: center;
+}
+
+main img
+{
+    /* constrain images on small screens */
+    max-width: 100%;
+}
+
+.display    {
+    font-weight:200;
+    font-size:3rem;
+    margin: 0 0 2rem 0;
+}
+
+#jumbo {
+    text-align:left;
+}
+
+.btn-primary {
+    margin: 1rem 2rem;
+}
+
+.btn-block {
+    font-weight:lighter;
+    letter-spacing:1px;
+}
+
+.small {
+    font-size:small;
+}
+
+#signup {
+    max-width:450px;
+    margin: 0 auto;
+}
+
+.card {
+    margin:1rem 0;
+}
+
+.content {
+    text-align:left;
+}

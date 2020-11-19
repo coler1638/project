@@ -1,0 +1,87 @@
+**********************************
+TASKS COMPLETED:
+**********************************
+1. Designed webapp in Adobe XD
+2. Deploy all page designs to HTML and CSS
+    > apology.html DONE
+    > diarycard.html TODO
+    > diarycardhistory.html TODO
+    > index.html DONE
+    > layout.html DONE
+    > login.html DONE
+    > selectmodule.html TODO
+    > signup.html DONE
+    > skills.html TODO
+    > skillshistory.html TODO
+    > tips.html TODO
+    > updatecard.html TODO
+    > updateskills.html TODO
+
+**********************************
+TODOS:
+**********************************
+
+HTML:   for diarycard, diarycardhistory, selectmodule, skills,
+        skillshistory, tips, updatecard and updateskills
+
+CSS:    set global "Headspace Green" color variable by extending
+        bootstrap
+
+PYTHON: set all routes and then implement all functions
+        get a twitter API for marsha linehan
+
+
+
+**********************************
+SPECS
+**********************************
+Title Colour: #FFFFFF
+Body Content Colour: #212529
+Headspace Green: #57A716
+Dark Green: #36680D
+Light Green: #D6FDB6
+
+In users.db, 
+    module[1] = Core Mindfulness
+    module[2] = emotional effectiveness
+    module[3] = distress tolerance
+    module[4] = interpersonal effectiveness
+
+**********************************
+SCAFFOLDING FOR DIARYCARDS.DB
+**********************************
+
+CREATE TABLE diarycard.db WHERE
+id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+user_id INTEGER NOT NULL,
+date DATETIME,
+SI at waking INTEGER NOT NULL,
+SI during day INTEGER NOT NULL,
+SI frequency INTEGER NOT NULL,
+self harm urges INTEGER NOT NULL,
+self hate thoughts INTEGER NOT NULL,
+pain INTEGER NOT NULL,
+sad INTEGER NOT NULL MIN = MAX = 5,
+guilt INTEGER NOT NULL,
+shame INTEGER NOT NULL,
+anger INTEGER NOT NULL,
+fear INTEGER NOT NULL,
+happy INTEGER NOT NULL,
+MaP BOOLEAN,
+cones INTEGER NOT NULL,
+grams INTEGER NOT NULL,
+S-B BOOLEAN,
+S-H BOOLEAN,
+conflict BOOLEAN,
+sleep hours INTEGER NOT NULL,
+sleep quality INTEGER NOT NULL,
+meals INTEGER NOT NULL,
+used skill INTEGER NOT NULL
+
+VALUES
+# entry one (starting at the value for user_id, not including id which SQL autoincrements from 1 for us)
+1,11/11/2020,3,3,25,3,4,3,4,5,5,0,0,0,1,5,0.5,0,0,0,1,6,2,5
+# entry two
+1,12/11/2020,2,2,20,3,4,2,4,5,5,0,1,1,1,5,0.5,0,0,0,3,10,2,5
+# entry three
+1,13/11/2020,3,3,25,3,3,1,4,4,5,0,0,0,1,8,0.8,0,0,0,2,8,1,5

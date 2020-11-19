@@ -1,0 +1,287 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    DBT Skills history
+{% endblock %}
+{% block breadcrumbs %}
+<nav aria-label="breadcrumb" class="breadcrumbs">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="/skills">Your DBT Skills</a></li>
+    <li class="breadcrumb-item active" aria-current="page">History</li>
+  </ol>
+</nav>
+{% endblock %}
+{% block main %}
+
+    <h1 class="display">Your DBT Skills history</h1>
+
+    <div class="row">
+        <div class="col-12">
+            <p class="skills-content"><strong>Your strongest skills:</strong>
+
+            {% if counts[0] > 3 %}
+                <span class="badge badge-pill badge-success">Wise mind</span>
+            {% endif %}
+            {% if counts[1] > 3 %}
+                <span class="badge badge-pill badge-success">Observe</span>
+            {% endif %}
+            {% if counts[2] > 3 %}
+                <span class="badge badge-pill badge-success">Describe</span>
+            {% endif %}
+            {% if counts[3] > 3 %}
+                <span class="badge badge-pill badge-success">Participate</span>
+            {% endif %}
+            {% if counts[4] > 3 %}
+                <span class="badge badge-pill badge-success">Nonjudgmental stance</span>
+            {% endif %}
+            {% if counts[5] > 3 %}
+                <span class="badge badge-pill badge-success">One-mindfully</span>
+            {% endif %}
+            {% if counts[6] > 3 %}
+                <span class="badge badge-pill badge-success">Effectiveness</span>
+            {% endif %}
+            {% if counts[7] > 3 %}
+                <span class="badge badge-pill badge-success">Identify my emotion</span>
+            {% endif %}
+            {% if counts[8] > 3 %}
+                <span class="badge badge-pill badge-success">Identify function of my emotion</span>
+            {% endif %}
+            {% if counts[9] > 3 %}
+                <span class="badge badge-pill badge-success">Check the facts</span>
+            {% endif %}
+            {% if counts[10] > 3 %}
+                <span class="badge badge-pill badge-success">Opposite action</span>
+            {% endif %}
+            {% if counts[11] > 3 %}
+                <span class="badge badge-pill badge-success">Problem solving</span>
+            {% endif %}
+            {% if counts[12] > 3 %}
+                <span class="badge badge-pill badge-success">Accumulate positives: short term</span>
+            {% endif %}
+            {% if counts[13] > 3 %}
+                <span class="badge badge-pill badge-success">Accumulate positives: long term</span>
+            {% endif %}
+            {% if counts[14] > 3 %}
+                <span class="badge badge-pill badge-success">Build mastery</span>
+            {% endif %}
+            {% if counts[15] > 3 %}
+                <span class="badge badge-pill badge-success">Cope ahead</span>
+            {% endif %}
+            {% if counts[16] > 3 %}
+                <span class="badge badge-pill badge-success">Reduce vulnerability</span>
+            {% endif %}
+            {% if counts[17] > 3 %}
+                <span class="badge badge-pill badge-success">Mindfulness of current emotion</span>
+            {% endif %}
+            {% if counts[18] > 3 %}
+                <span class="badge badge-pill badge-success">STOP</span>
+            {% endif %}
+            {% if counts[19] > 3 %}
+                <span class="badge badge-pill badge-success">Pros & cons</span>
+            {% endif %}
+            {% if counts[20] > 3 %}
+                <span class="badge badge-pill badge-success">TIPP</span>
+            {% endif %}
+            {% if counts[21] > 3 %}
+                <span class="badge badge-pill badge-success">Wise mind ACCEPTS</span>
+            {% endif %}
+            {% if counts[22] > 3 %}
+                <span class="badge badge-pill badge-success">Self-soothing</span>
+            {% endif %}
+            {% if counts[23] > 3 %}
+                <span class="badge badge-pill badge-success">IMPROVE the moment</span>
+            {% endif %}
+            {% if counts[24] > 3 %}
+                <span class="badge badge-pill badge-success">Radical acceptance</span>
+            {% endif %}
+            {% if counts[25] > 3 %}
+                <span class="badge badge-pill badge-success">Turning the mind</span>
+            {% endif %}
+            {% if counts[26] > 3 %}
+                <span class="badge badge-pill badge-success">Willingness</span>
+            {% endif %}
+            {% if counts[27] > 3 %}
+                <span class="badge badge-pill badge-success">Allowing the mind</span>
+            {% endif %}
+            {% if counts[28] > 3 %}
+                <span class="badge badge-pill badge-success">Objective effectiveness</span>
+            {% endif %}
+            {% if counts[29] > 3 %}
+                <span class="badge badge-pill badge-success">Relationship effectiveness</span>
+            {% endif %}
+            {% if counts[30] > 3 %}
+                <span class="badge badge-pill badge-success">Self-respect effectiveness</span>
+            {% endif %}
+            {% if counts[31] > 3 %}
+                <span class="badge badge-pill badge-success">Attending to relationships</span>
+            {% endif %}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <p class="skills-content"><strong>Needs refreshing:</strong>
+            {% if counts[0] < 1 %}
+                <span class="badge badge-pill badge-danger">Wise mind</span>
+            {% endif %}
+            {% if counts[1] < 1 %}
+                <span class="badge badge-pill badge-danger">Observe</span>
+            {% endif %}
+            {% if counts[2] < 1 %}
+                <span class="badge badge-pill badge-danger">Describe</span>
+            {% endif %}
+            {% if counts[3] < 1 %}
+                <span class="badge badge-pill badge-danger">Participate</span>
+            {% endif %}
+            {% if counts[4] < 1 %}
+                <span class="badge badge-pill badge-danger">Nonjudgmental stance</span>
+            {% endif %}
+            {% if counts[5] < 1 %}
+                <span class="badge badge-pill badge-danger">One-mindfully</span>
+            {% endif %}
+            {% if counts[6] < 1 %}
+                <span class="badge badge-pill badge-danger">Effectiveness</span>
+            {% endif %}
+            {% if counts[7] < 1 %}
+                <span class="badge badge-pill badge-danger">Identify my emotion</span>
+            {% endif %}
+            {% if counts[8] < 1 %}
+                <span class="badge badge-pill badge-danger">Identify function of my emotion</span>
+            {% endif %}
+            {% if counts[9] < 1 %}
+                <span class="badge badge-pill badge-danger">Check the facts</span>
+            {% endif %}
+            {% if counts[10] < 1 %}
+                <span class="badge badge-pill badge-danger">Opposite action</span>
+            {% endif %}
+            {% if counts[11] < 1 %}
+                <span class="badge badge-pill badge-danger">Problem solving</span>
+            {% endif %}
+            {% if counts[12] < 1 %}
+                <span class="badge badge-pill badge-danger">Accumulate positives: short term</span>
+            {% endif %}
+            {% if counts[13] < 1 %}
+                <span class="badge badge-pill badge-danger">Accumulate positives: long term</span>
+            {% endif %}
+            {% if counts[14] < 1 %}
+                <span class="badge badge-pill badge-danger">Build mastery</span>
+            {% endif %}
+            {% if counts[15] < 1 %}
+                <span class="badge badge-pill badge-danger">Cope ahead</span>
+            {% endif %}
+            {% if counts[16] < 1 %}
+                <span class="badge badge-pill badge-danger">Reduce vulnerability</span>
+            {% endif %}
+            {% if counts[17] < 1 %}
+                <span class="badge badge-pill badge-danger">Mindfulness of current emotion</span>
+            {% endif %}
+            {% if counts[18] < 1 %}
+                <span class="badge badge-pill badge-danger">STOP</span>
+            {% endif %}
+            {% if counts[19] < 1 %}
+                <span class="badge badge-pill badge-danger">Pros & cons</span>
+            {% endif %}
+            {% if counts[20] < 1 %}
+                <span class="badge badge-pill badge-danger">TIPP</span>
+            {% endif %}
+            {% if counts[21] < 1 %}
+                <span class="badge badge-pill badge-danger">Wise mind ACCEPTS</span>
+            {% endif %}
+            {% if counts[22] < 1 %}
+                <span class="badge badge-pill badge-danger">Self-soothing</span>
+            {% endif %}
+            {% if counts[23] < 1 %}
+                <span class="badge badge-pill badge-danger">IMPROVE the moment</span>
+            {% endif %}
+            {% if counts[24] < 1 %}
+                <span class="badge badge-pill badge-danger">Radical acceptance</span>
+            {% endif %}
+            {% if counts[25] < 1 %}
+                <span class="badge badge-pill badge-danger">Turning the mind</span>
+            {% endif %}
+            {% if counts[26] < 1 %}
+                <span class="badge badge-pill badge-danger">Willingness</span>
+            {% endif %}
+            {% if counts[27] < 1 %}
+                <span class="badge badge-pill badge-danger">Allowing the mind</span>
+            {% endif %}
+            {% if counts[28] < 1 %}
+                <span class="badge badge-pill badge-danger">Objective effectiveness</span>
+            {% endif %}
+            {% if counts[29] < 1 %}
+                <span class="badge badge-pill badge-danger">Relationship effectiveness</span>
+            {% endif %}
+            {% if counts[30] < 1 %}
+                <span class="badge badge-pill badge-danger">Self-respect effectiveness</span>
+            {% endif %}
+            {% if counts[31] < 1 %}
+                <span class="badge badge-pill badge-danger">Attending to relationships</span>
+            {% endif %}
+
+            </p>
+        </div>
+    </div>
+
+    <table class="table">
+        <thead class="thead-light">
+            <th colspan="5">DBT Skills Used</th>
+        </thead>
+        <tr>
+            <th>Date</th>
+            <th>Core Mindfulness</th>
+            <th>Emotion Regulation</th>
+            <th>Distress Tolerance</th>
+            <th>Interpersonal Effectiveness</th>
+        </tr>
+        <tbody>
+            {% for row in rows %}
+        <tr>
+            <td>{{ row.date }}</td>
+            <td>
+                <span class="badge badge-pill badge-success">{{ row.wisemind }}</span>
+                <span class="badge badge-pill badge-success">{{ row.observe }}</span>
+                <span class="badge badge-pill badge-success">{{ row.describe }}</span>
+                <span class="badge badge-pill badge-success">{{ row.participate }}</span>
+                <span class="badge badge-pill badge-success">{{ row.nonjudgemental_stance }}</span>
+                <span class="badge badge-pill badge-success">{{ row.one_mindfully }}</span>
+                <span class="badge badge-pill badge-success">{{ row.effectively }}</span>
+            </td>
+            <td>
+                <span class="badge badge-pill badge-success">{{ row.identified_emotion }}</span>
+                <span class="badge badge-pill badge-success">{{ row.identified_emotion_function }}</span>
+                <span class="badge badge-pill badge-success">{{ row.check_facts }}</span>
+                <span class="badge badge-pill badge-success">{{ row.opposite_action }}</span>
+                <span class="badge badge-pill badge-success">{{ row.problem_solving }}</span>
+                <span class="badge badge-pill badge-success">{{ row.positives_short }}</span>
+                <span class="badge badge-pill badge-success">{{ row.positives_long }}</span>
+                <span class="badge badge-pill badge-success">{{ row.build_mastery }}</span>
+                <span class="badge badge-pill badge-success">{{ row.cope_ahead }}</span>
+                <span class="badge badge-pill badge-success">{{ row.reduce_vulnerability }}</span>
+                <span class="badge badge-pill badge-success">{{ row.mindfulness_emotion }}</span>
+
+            </td>
+            <td>
+                <span class="badge badge-pill badge-success">{{ row.stop_ }}</span>
+                <span class="badge badge-pill badge-success">{{ row.pros_cons }}</span>
+                <span class="badge badge-pill badge-success">{{ row.tipp }}</span>
+                <span class="badge badge-pill badge-success">{{ row.wm_accepts }}</span>
+                <span class="badge badge-pill badge-success">{{ row.self_soothing }}</span>
+                <span class="badge badge-pill badge-success">{{ row.improve }}</span>
+                <span class="badge badge-pill badge-success">{{ row.radical_acceptance }}</span>
+                <span class="badge badge-pill badge-success">{{ row.turning_mind }}</span>
+                <span class="badge badge-pill badge-success">{{ row.willingness }}</span>
+                <span class="badge badge-pill badge-success">{{ row.allowing_mind }}</span>
+            </td>
+            <td>
+                <span class="badge badge-pill badge-success">{{ row.objective_effectiveness }}</span>
+                <span class="badge badge-pill badge-success">{{ row.relationship_effectiveness }}</span>
+                <span class="badge badge-pill badge-success">{{ row.selfrespect_effectiveness }}</span>
+                <span class="badge badge-pill badge-success">{{ row.attending_relationships }}</span>
+            </td>
+        </tr>
+          {% endfor %}
+        </tbody>
+    </table>
+
+  <a class="btn btn-primary light-text" href="/skills">< Back to Your DBT Skills</a>
+
+{% endblock %}

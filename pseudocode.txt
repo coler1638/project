@@ -1,34 +1,43 @@
 **********************************
 TASKS COMPLETED:
 **********************************
-1. Designed webapp in Adobe XD
-2. Deploy all page designs to HTML and CSS
-    > apology.html DONE
-    > diarycard.html TODO
-    > diarycardhistory.html TODO
-    > index.html DONE
-    > layout.html DONE
-    > login.html DONE
-    > selectmodule.html TODO
-    > signup.html DONE
-    > skills.html TODO
-    > skillshistory.html TODO
-    > tips.html TODO
-    > updatecard.html TODO
-    > updateskills.html TODO
+1. Design webapp in Adobe XD        > DONE 13/11/2020
 
-**********************************
-TODOS:
-**********************************
+2. Deploy all static page designs to HTML and CSS
+    > ietips.html                   > DONE 15/11/2020
+    > dttips.html                   > DONE 15/11/2020
+    > ertips.html                   > DONE 15/11/2020
+    > cmtips.html                   > DONE 15/11/2020
+    > updateskills.html             > DONE 15/11/2020
+    > skills.html                   > DONE 15/11/2020
+    > skillshistory.html            > DONE 15/11/2020
+    > tips.html                     > DONE 15/11/2020
+    > updatecard.html               > DONE 15/11/2020
+    > diarycardhistory.html         > DONE 15/11/2020
+    > selectmodule.html             > DONE 15/11/2020
+    > diarycard.html                > DONE 15/11/2020
+    > index.html                    > DONE 14/11/2020
+    > layout.html                   > DONE 14/11/2020
+    > login.html                    > DONE 14/11/2020
+    > apology.html                  > DONE 14/11/2020
+    > signup.html                   > DONE 14/11/2020
 
-HTML:   for diarycard, diarycardhistory, selectmodule, skills,
-        skillshistory, tips, updatecard and updateskills
+3. Code python routes:
+    > /tips                         > DONE 17/11/2020
+    > /skills                       > DONE 17/11/2020
+    > /skillshistory                > DONE 17/11/2020
+    > /diarycard                    > DONE 16/11/2020
+    > /diarycardhistory             > DONE 16/11/2020
+    > /updatecard                   > DONE 16/11/2020
+    > /updateskills                 > DONE 16/11/2020
+    > /selectmodule                 > DONE 15/11/2020
+    > /login                        > DONE 14/11/2020
+    > /logout                       > DONE 14/11/2020
+    > /signup                       > DONE 14/11/2020
+    > /(index)                      > DONE 14/11/2020
 
-CSS:    set global "Headspace Green" color variable by extending
-        bootstrap
 
-PYTHON: set all routes and then implement all functions
-        get a twitter API for marsha linehan
+7. Write 5 tips per module
 
 
 
@@ -41,7 +50,7 @@ Headspace Green: #57A716
 Dark Green: #36680D
 Light Green: #D6FDB6
 
-In users.db, 
+In users.db,
     module[1] = Core Mindfulness
     module[2] = emotional effectiveness
     module[3] = distress tolerance
@@ -51,37 +60,62 @@ In users.db,
 SCAFFOLDING FOR DIARYCARDS.DB
 **********************************
 
-CREATE TABLE diarycard.db WHERE
-id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
-user_id INTEGER NOT NULL,
-date DATETIME,
-SI at waking INTEGER NOT NULL,
-SI during day INTEGER NOT NULL,
-SI frequency INTEGER NOT NULL,
-self harm urges INTEGER NOT NULL,
-self hate thoughts INTEGER NOT NULL,
-pain INTEGER NOT NULL,
-sad INTEGER NOT NULL MIN = MAX = 5,
-guilt INTEGER NOT NULL,
-shame INTEGER NOT NULL,
-anger INTEGER NOT NULL,
-fear INTEGER NOT NULL,
-happy INTEGER NOT NULL,
-MaP BOOLEAN,
-cones INTEGER NOT NULL,
-grams INTEGER NOT NULL,
-S-B BOOLEAN,
-S-H BOOLEAN,
-conflict BOOLEAN,
-sleep hours INTEGER NOT NULL,
-sleep quality INTEGER NOT NULL,
-meals INTEGER NOT NULL,
-used skill INTEGER NOT NULL
+CREATE TABLE 'diarycards'  ('id' integer PRIMARY KEY AUTOINCREMENT NOT NULL,
+                            'user_id' integer,
+                            'date' datetime,
+                            'si-urges' integer,
+                            'sh-urges' integer,
+                            'pain' integer,
+                            'sad' integer,
+                            'guilt' integer,
+                            'shame' integer,
+                            'anger' integer,
+                            'fear' integer,
+                            'happy' integer,
+                            'meds' boolean,
+                            'sleep' integer,
+                            'skills-used' integer)
 
-VALUES
-# entry one (starting at the value for user_id, not including id which SQL autoincrements from 1 for us)
-1,11/11/2020,3,3,25,3,4,3,4,5,5,0,0,0,1,5,0.5,0,0,0,1,6,2,5
-# entry two
-1,12/11/2020,2,2,20,3,4,2,4,5,5,0,1,1,1,5,0.5,0,0,0,3,10,2,5
-# entry three
-1,13/11/2020,3,3,25,3,3,1,4,4,5,0,0,0,1,8,0.8,0,0,0,2,8,1,5
+
+**********************************
+SCAFFOLDING FOR DBTSKILLS.DB
+**********************************
+
+CREATE TABLE 'dbtskills'  ('id' integer PRIMARY KEY AUTOINCREMENT NOT NULL,
+                'user_id' integer,
+                'date' datetime,
+                'wisemind' boolean,
+                'observe' boolean,
+                'describe' boolean,
+                'participate' boolean,
+                'nonjudgmental_stance' boolean,
+                'one_mindfully' boolean,
+                'effectiveness' boolean,
+
+                'identified_emotion' boolean,
+                'identified_emotion_function' boolean,
+                'check_facts' boolean,
+                'opposite_action' boolean,
+                'problem_solving' boolean,
+                'positives_short' boolean,
+                'positives_long' boolean,
+                'build_mastery' boolean,
+                'cope_ahead' boolean,
+                'reduce_vulnerability' boolean,
+                'mindfulness_emotion' boolean,
+
+                'stop_' boolean,
+                'pros_cons' boolean,
+                'tipp' boolean,
+                'wm_accepts' boolean,
+                'self_soothing' boolean,
+                'improve' boolean,
+                'radical_acceptance' boolean,
+                'turning_mind' boolean,
+                'willingness' boolean,
+                'allowing_mind' boolean,
+
+                'objective_effectiveness' boolean,
+                'relationship_effectiveness' boolean,
+                'selfrespect_effectiveness' boolean,
+                'attending_relationships' boolean

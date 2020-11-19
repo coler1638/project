@@ -1,0 +1,13 @@
+cs50
+Flask
+Flask-Session
+requests
+datetime, date
+os
+selenium
+tempfile
+werkzeug.exceptions
+werkzeug.security
+bs4
+pandas
+time

@@ -1,0 +1,287 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Update Skills
+{% endblock %}
+{% block breadcrumbs %}
+<nav aria-label="breadcrumb" class="breadcrumbs">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="/skills">Your DBT Skills</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Make an entry</li>
+  </ol>
+</nav>
+{% endblock %}
+{% block main %}
+
+
+<h1 class="display">Update your DBT Skills</h1>
+    <!-- start form -->
+    <form action="/updateskills" method="post" class="form-control wideform">
+
+        <div class="row align-items-left alignleft pad">
+            <div class="col-12">
+                <!-- date -->
+                <label for="date"><strong>Date:</strong></label>
+                <input type="date" value="2011-08-19" id="date" name="date">
+            </div>
+        </div>
+
+        <div class="row alignleft align-items-start">
+            <div class="col-3">
+                <!-- core mindfulness -->
+                <p><strong>Core Mindfulness Skills</strong></p>
+                <!-- Wise Mind -->
+                <div class="form-check smalltext" data-toggle="tooltip" data-placement="top" title="The synthesis of reasonable and emotional mind. What you know to be true.">
+                      <input class="form-check-input" type="checkbox" value="wisemind" id="wisemind" name="wisemind">
+                      <label class="form-check-label" for="wisemind">
+                        Wise mind
+                      </label>
+                </div>
+                 <!-- Observe -->
+                <div class="form-check smalltext" data-toggle="tooltip" data-placement="top" title="Noticing without labelling">
+                      <input class="form-check-input" type="checkbox" value="observe" id="observe"  name="observe">
+                      <label class="form-check-label" for="observe">
+                        Observe
+                      </label>
+                </div>
+                <!-- Describe -->
+                <div class="form-check smalltext" data-toggle="tooltip" data-placement="top" title="Adding labels to what you have observed">
+                        <input class="form-check-input" type="checkbox" value="describe" id="describe"  name="describe">
+                        <label class="form-check-label" for="describe">
+                        Describe
+                        </label>
+                </div>
+                <!-- Participate -->
+                <div class="form-check smalltext" data-toggle="tooltip" data-placement="top" title="Entered fully into the experience and mindfully became one with the experience">
+                      <input class="form-check-input" type="checkbox" value="participate" id="participate"  name="participate">
+                      <label class="form-check-label" for="participate">
+                        Participate
+                      </label>
+                </div>
+                <!-- Nonjudgemental Stance -->
+                <div class="form-check smalltext" data-toggle="tooltip" data-placement="top" title="Let go of right/wrong. State personal preferences and consequences.">
+                      <input class="form-check-input" type="checkbox" value="nonjudgmental_stance" id="nonjudgmental_stance" name="nonjudgmental_stance">
+                      <label class="form-check-label" for="nonjudgmental_stance">
+                        Nonjudgemental stance
+                      </label>
+                </div>
+                <!-- One-mindfully -->
+                <div class="form-check smalltext" data-toggle="tooltip" data-placement="top" title="Pinned myself to the now. Did one thing in the moment.">
+                      <input class="form-check-input" type="checkbox" value="one_mindfully" id="one_mindfully" name="one_mindfully">
+                      <label class="form-check-label" for="one_mindfully">
+                        One-mindfully
+                      </label>
+                </div>
+                <!-- Effectiveness -->
+                <div class="form-check smalltext" data-toggle="tooltip" data-placement="top" title="Focused on what works (not what should or should not be etc.)">
+                      <input class="form-check-input" type="checkbox" value="effectiveness" id="effectiveness" name="effectiveness">
+                      <label class="form-check-label" for="effectiveness">
+                        Effectiveness
+                      </label>
+                </div>
+            </div>
+
+
+
+            <div class="col-3">
+                <!-- emotion regulation -->
+                <p><strong>Emotion Regulation Skills</strong></p>
+                <!-- identified-emotion -->
+                <div class="form-check smalltext" data-toggle="tooltip" data-placement="top" title="Promoting event, Interpretation, Biological Changes/Experiences(Urges), Expressions">
+                      <input class="form-check-input" type="checkbox" value="identified_emotion" id="identified_emotion" name="identified_emotion">
+                      <label class="form-check-label" for="identified_emotion">
+                        Identified my emotion
+                      </label>
+                </div>
+                 <!-- identified-emotion-function -->
+                <div class="form-check smalltext" data-toggle="tooltip" data-placement="top" title="Motivate action, Communicate to others, Communicate to myself">
+                      <input class="form-check-input" type="checkbox" value="identified_emotion_function" id="identified_emotion_function" name="identified_emotion_function">
+                      <label class="form-check-label" for="identified_emotion_function">
+                        Identified the function of my emotion
+                      </label>
+                </div>
+                <!-- Check the facts -->
+                <div class="form-check smalltext" data-toggle="tooltip" data-placement="top" title="Of: prompting event, interpretation, assumed threat, feared a catastrophe">
+                        <input class="form-check-input" type="checkbox" value="check_facts" id="check_facts" name="check_facts">
+                        <label class="form-check-label" for="check_facts">
+                        Check the facts
+                        </label>
+                </div>
+                <!-- opposite-action -->
+                <div class="form-check smalltext" data-toggle="tooltip" data-placement="top" title="Act opposite to the action urge when urge is ineffective">
+                      <input class="form-check-input" type="checkbox" value="opposite_action" id="opposite_action" name="opposite_action">
+                      <label class="form-check-label" for="opposite_action">
+                        Opposite action
+                      </label>
+                </div>
+                <!-- problem-solving -->
+                <div class="form-check smalltext" data-toggle="tooltip" data-placement="top" title="Change the facts when the facts are the problem">
+                      <input class="form-check-input" type="checkbox" value="problem_solving" id="problem_solving" name="problem_solving">
+                      <label class="form-check-label" for="problem_solving">
+                        Problem solving
+                      </label>
+                </div>
+                <!-- positives-short -->
+                <div class="form-check smalltext" data-toggle="tooltip" data-placement="top" title="Increase positive events, mindful of positive experiences, unmindful of worries">
+                      <input class="form-check-input" type="checkbox" value="positives_short" id="positives_short" name="positives_short">
+                      <label class="form-check-label" for="positives_short">
+                        Accumulate positives (short term)
+                      </label>
+                </div>
+                <!-- positives-long -->
+                <div class="form-check smalltext" data-toggle="tooltip" data-placement="top" title="Worked on a values-based goal, etc.">
+                      <input class="form-check-input" type="checkbox" value="positives_long" id="positives_long" name="positives_long">
+                      <label class="form-check-label" for="positives_long">
+                        Accumulate positives (long term)
+                      </label>
+                </div>
+                <!-- build-mastery-->
+                <div class="form-check smalltext" data-toggle="tooltip" data-placement="top" title="Do activities that make you feel accomplished; avoid avoiding">
+                      <input class="form-check-input" type="checkbox" value="build_mastery" id="build_mastery" name="build_mastery">
+                      <label class="form-check-label" for="build_mastery">
+                        Build mastery
+                      </label>
+                </div>
+                <!-- cope-ahead -->
+                <div class="form-check smalltext" data-toggle="tooltip" data-placement="top" title="Imagined rehearsal of what skills you will apply to a future challenge">
+                      <input class="form-check-input" type="checkbox" value="cope_ahead" id="cope_ahead" name="cope_ahead">
+                      <label class="form-check-label" for="cope_ahead">
+                        Cope ahead
+                      </label>
+                </div>
+                <!-- reduce-vulnerability -->
+                <div class="form-check smalltext" data-toggle="tooltip" data-placement="top" title="Physical illness, balance eating, avoid mood-altering drugs, sleep, exercise">
+                      <input class="form-check-input" type="checkbox" value="reduce_vulnerability" id="reduce_vulnerability" name="reduce_vulnerability">
+                      <label class="form-check-label" for="reduce_vulnerability">
+                        Reduce vulnerability
+                      </label>
+                </div>
+                <!-- mindfulness-emotion -->
+                <div class="form-check smalltext" data-toggle="tooltip" data-placement="top" title="Sit with the emotion, allow the emotion to come and go">
+                      <input class="form-check-input" type="checkbox" value="mindfulness_emotion" id="mindfulness_emotion" name="mindfulness_emotion">
+                      <label class="form-check-label" for="mindfulness_emotion">
+                        Mindfulness of current emotion
+                      </label>
+                </div>
+            </div>
+
+
+            <div class="col-3">
+                <!-- distress tolerance -->
+                <p><strong>Distress Tolerance Skills</strong></p>
+                <!-- stop_ -->
+                <div class="form-check smalltext" data-toggle="tooltip" data-placement="top" title="Stop, Take a step back and breathe, Observe stimuli, Proceed mindfully">
+                      <input class="form-check-input" type="checkbox" value="stop_" id="stop_" name="stop_">
+                      <label class="form-check-label" for="stop_">
+                        STOP
+                      </label>
+                </div>
+                 <!-- pros-cons -->
+                <div class="form-check smalltext" data-toggle="tooltip" data-placement="top" title="Use to make decisions, increase motivation, understand behaviour">
+                      <input class="form-check-input" type="checkbox" value="pros_cons" id="pros_cons" name="pros_cons">
+                      <label class="form-check-label" for="pros_cons">
+                        Pros and cons
+                      </label>
+                </div>
+                <!-- tipp -->
+                <div class="form-check smalltext" data-toggle="tooltip" data-placement="top" title="Lower temperature of face, intense exercise, paced breathing, paired muscle relaxation">
+                        <input class="form-check-input" type="checkbox" value="tipp" id="tipp" name="tipp">
+                        <label class="form-check-label" for="tipp">
+                        TIPP
+                        </label>
+                </div>
+                <!-- wm-accepts -->
+                <div class="form-check smalltext" data-toggle="tooltip" data-placement="top" title="Activities, comparisons, contribution, emotions, push away, thoughts, sensations">
+                      <input class="form-check-input" type="checkbox" value="wm_accepts" id="wm_accepts" name="wm_accepts">
+                      <label class="form-check-label" for="wm_accepts">
+                        Distract with Wise Mind ACCEPTS
+                      </label>
+                </div>
+                <!-- self-soothing -->
+                <div class="form-check smalltext" data-toggle="tooltip" data-placement="top" title="With senses, body scan, compassionate hand">
+                      <input class="form-check-input" type="checkbox" value="self_soothing" id="self_soothing" name="self_soothing">
+                      <label class="form-check-label" for="self_soothing">
+                        Self-soothing
+                      </label>
+                </div>
+                <!-- improve -->
+                <div class="form-check smalltext" data-toggle="tooltip" data-placement="top" title="Imagery, Meaning, Prayer, Relaxing, One thing in the moment, Vacation, Encouragement">
+                      <input class="form-check-input" type="checkbox" value="improve" id="improve" name="improve">
+                      <label class="form-check-label" for="improve">
+                        IMPROVE the moment
+                      </label>
+                </div>
+                <!-- radical-acceptance -->
+                <div class="form-check smalltext" data-toggle="tooltip" data-placement="top" title="Identify what has to be accepted. Accept ALL THE WAY.">
+                      <input class="form-check-input" type="checkbox" value="radical_acceptance" id="radical_acceptance" name="radical_acceptance">
+                      <label class="form-check-label" for="radical_acceptance">
+                        Radical Acceptance
+                      </label>
+                </div>
+                <!-- turning the mind -->
+                <div class="form-check smalltext" data-toggle="tooltip" data-placement="top" title="Notice when you have stopped accepting and turn the mind back towards acceptance.">
+                      <input class="form-check-input" type="checkbox" value="turning_mind" id="turning_mind" name="turning_mind">
+                      <label class="form-check-label" for="turning_mind">
+                        Turning the mind
+                      </label>
+                </div>
+                <!-- willingness -->
+                <div class="form-check smalltext" data-toggle="tooltip" data-placement="top" title="Half smile and willing hands. Say yes to what is.">
+                      <input class="form-check-input" type="checkbox" value="willingness" id="willingness" name="willingness">
+                      <label class="form-check-label" for="willingness">
+                        Willingness
+                      </label>
+                </div>
+                <!-- allowing-mind -->
+                <div class="form-check smalltext" data-toggle="tooltip" data-placement="top" title="Observe and describe thoughts as just thoughts.">
+                      <input class="form-check-input" type="checkbox" value="allowing_mind" id="allowing_mind" name="allowing_mind">
+                      <label class="form-check-label" for="allowing_mind">
+                        Allowing the mind: mindfulness of current thoughts
+                      </label>
+                </div>
+            </div>
+
+            <div class="col-3">
+                 <!-- interpersonal effectivness -->
+                <p><strong>Interpersonal Effectiveness Skills</strong></p>
+                <!-- objective-effectiveness -->
+                <div class="form-check smalltext" data-toggle="tooltip" data-placement="top" title="DEAR MAN: Describe, Express, Assert, Reinforce, Mindfully, Act confident, Negotiate">
+                      <input class="form-check-input" type="checkbox" value="objective_effectiveness" id="objective_effectiveness" name="objective_effectiveness">
+                      <label class="form-check-label" for="objective_effectiveness">
+                        Objective effectiveness: DEAR MAN
+                      </label>
+                </div>
+                 <!-- relationship-effectiveness -->
+                <div class="form-check smalltext" data-toggle="tooltip" data-placement="top" title="GIVE: be Gentle, act Interested, Validate, use an Easy manner">
+                      <input class="form-check-input" type="checkbox" value="relationship_effectiveness" id="relationship_effectiveness" name="relationship_effectiveness">
+                      <label class="form-check-label" for="relationship_effectiveness">
+                        Relationship effectiveness: GIVE
+                      </label>
+                </div>
+                 <!-- selfrespect-effectiveness -->
+                <div class="form-check smalltext" data-toggle="tooltip" data-placement="top" title="FAST: be Fair, no (over) Apologising, Stick to values, be Truthful">
+                      <input class="form-check-input" type="checkbox" value="selfrespect_effectiveness" id="selfrespect_effectiveness" name="selfrespect_effectiveness">
+                      <label class="form-check-label" for="selfrespect_effectiveness">
+                        Self-respect effectiveness: FAST
+                      </label>
+                </div>
+                <!-- attending-relationships -->
+                <div class="form-check smalltext" data-toggle="tooltip" data-placement="s" title="Build new ones, attend to current ones, end destructive ones">
+                      <input class="form-check-input" type="checkbox" value="attending_relationships" id="attending_relationships" name="attending_relationships">
+                      <label class="form-check-label" for="attending_relationships">
+                        Attending to relationships
+                      </label>
+                </div>
+            </div>
+        </div>
+            <div class="mt-auto p-2"><input type="submit" class="btn btn-primary"></div>
+            </div>
+        </div>
+</form>
+<script>
+$(document).ready(function(){
+  $('[data-toggle="tooltip"]').tooltip();
+});
+</script>
+
+{% endblock %}

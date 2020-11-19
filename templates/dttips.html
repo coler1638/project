@@ -1,0 +1,71 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Distress Tolerance tips
+{% endblock %}
+{% block breadcrumbs %}
+<nav aria-label="breadcrumb" class="breadcrumbs">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="/tips">Tips & Tricks</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Distress Tolerance</li>
+  </ol>
+</nav>
+{% endblock %}
+{% block main %}
+<div class="row align-items-center">
+      <div class="col-lg-12">
+          <h1 class="display content">Distress Tolerance Tips</h1>
+      </div>
+</div>
+<div class="row">
+    <div class="col-md-6">
+
+    <div id="carouselExampleControls2" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                 <div class="carousel-item active">
+                    <div class="card card-carousel">
+                        <div class="card-body">
+                         <p class="card-text">Distress tolerance strategies help us to get though difficult feelings and situations, to tolerate (deal with, get through, sit with, accept) the things that we can't immediately change. </p>
+                        </div>
+                    </div>
+                </div>
+                {% for mtip in mtips %}
+                <div class="carousel-item ">
+                    <div class="card card-carousel">
+                        <div class="card-body">
+                            <p class="card-text"> {{ mtip['tip'] }} </p>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleControls2" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleControls2" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
+
+    <div class="col-md-6">
+        <div class="card text-white bg-success mb-3 tip-card">
+              <div class="card-header">What is Distress Tolerance?</div>
+              <div class="card-body">
+                <h5 class="card-title">Distress Tolerance</h5>
+                <p class="card-text">DBT teaches us four sets of skills for tolerating (dealing with, getting through, accepting) the distressing events and activities in our lives: wise mind ACCEPTS, self-soothing, improving the moment, and pros and cons.</p>
+              </div>
+        </div>
+        <h5 class="alignleft pl-5">Learn more about Distress Tolerance:</h5>
+        <div class="blockbtnlist">
+           <button type="button" class="btn btn-primary btn-lg btn-block" onclick="location.href='https://behavioraltech.org/resources/faqs/dialectical-behavior-therapy-dbt/skills-training/'">BehaviouralTech.org ></button>
+           <button type="button" class="btn btn-primary btn-lg btn-block" onclick="location.href='https://www.goodtherapy.org/blog/dialectical-behavior-therapy-dbt-core-mindfulness/'">GoodTherapy.org ></button>
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}

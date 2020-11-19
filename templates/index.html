@@ -13,28 +13,148 @@
           <p class="content"><strong>Current module:</strong> {{ user_module }} | <a href="/selectmodule">Change modules</a></p>
       </div>
 </div>
-<div class="row align-items-center">
+<div class="row">
     <div class="col-md-6">
         <div class="card content">
             <div class="card-header">Your week in review</div>
-            <div class="card-body">todo { some content here }</div>
+            <div class="card-body smalltext">
+                <strong>Average sleep:</strong> {{ avg_sleep }} hours<br>
+                <strong>Average suicidal urges:</strong> {{ avg_si_urges }} / 5<br>
+                <strong>Average self-harm urges:</strong> {{ avg_sh_urges }} / 5<br>
+            </div>
         </div>
         <div class="card content">
-            <div class="card-header">Your top skills</div>
-            <div class="card-body">todo { some content here }</div>
+            <div class="card-header">Skills used this week</div>
+            <div class="card-body smalltext">
+                <strong>Core mindfulness skills:</strong>
+                {% if wisemind > 0 %}
+                    <span class="badge badge-pill badge-success">Wise mind</span>
+                {% endif %}
+                {% if observe > 0 %}
+                    <span class="badge badge-pill badge-success">Observe</span>
+                {% endif %}
+                {% if describe > 0 %}
+                    <span class="badge badge-pill badge-success">Describe</span>
+                {% endif %}
+                {% if participate > 0 %}
+                    <span class="badge badge-pill badge-success">Participate</span>
+                {% endif %}
+                {% if nonjudgmental_stance > 0 %}
+                    <span class="badge badge-pill badge-success">Nonjudgmental stance</span>
+                {% endif %}
+                {% if one_mindfully > 0 %}
+                    <span class="badge badge-pill badge-success">One-mindfully</span>
+                {% endif %}
+                {% if effectiveness > 0 %}
+                    <span class="badge badge-pill badge-success">Effectiveness</span>
+                {% endif %}
+                <br><br>
+
+                <strong>Emotion regulation skills:</strong>
+                {% if identified_emotion > 0 %}
+                    <span class="badge badge-pill badge-success">Identified my emotion</span>
+                {% endif %}
+                {% if identified_emotion_function > 0 %}
+                    <span class="badge badge-pill badge-success">Identified function of my emotion</span>
+                {% endif %}
+                {% if check_facts > 0 %}
+                    <span class="badge badge-pill badge-success">Check the facts</span>
+                {% endif %}
+                {% if opposite_action > 0 %}
+                    <span class="badge badge-pill badge-success">Opposite action</span>
+                {% endif %}
+                {% if problem_solving > 0 %}
+                    <span class="badge badge-pill badge-success">Problem solving</span>
+                {% endif %}
+                {% if positives_short > 0 %}
+                    <span class="badge badge-pill badge-success">Accumulate positives: short-term</span>
+                {% endif %}
+                {% if positives_long > 0 %}
+                    <span class="badge badge-pill badge-success">Accumulate positives: long-term</span>
+                {% endif %}
+                {% if build_mastery > 0 %}
+                    <span class="badge badge-pill badge-success">Build mastery</span>
+                {% endif %}
+                {% if cope_ahead > 0 %}
+                    <span class="badge badge-pill badge-success">Cope ahead</span>
+                {% endif %}
+                {% if reduce_vulnerability > 0 %}
+                    <span class="badge badge-pill badge-success">Reduce vulnerability</span>
+                {% endif %}
+                {% if mindfulness_emotion > 0 %}
+                    <span class="badge badge-pill badge-success">Mindfulness of current emotion</span>
+                {% endif %}
+                <br><br>
+
+                <strong>Distress tolerance skills:</strong>
+                {% if stop_ > 0 %}
+                    <span class="badge badge-pill badge-success">STOP</span>
+                {% endif %}
+                {% if pros_cons > 0 %}
+                    <span class="badge badge-pill badge-success">Pros & cons</span>
+                {% endif %}
+                {% if tipp > 0 %}
+                    <span class="badge badge-pill badge-success">TIPP</span>
+                {% endif %}
+                {% if wm_accepts > 0 %}
+                    <span class="badge badge-pill badge-success">Wise mind ACCEPTS</span>
+                {% endif %}
+                {% if self_soothing > 0 %}
+                    <span class="badge badge-pill badge-success">Self-soothing</span>
+                {% endif %}
+                {% if improve > 0 %}
+                    <span class="badge badge-pill badge-success">IMPROVE the moment</span>
+                {% endif %}
+                {% if radical_acceptance > 0 %}
+                    <span class="badge badge-pill badge-success">Radical acceptance</span>
+                {% endif %}
+                {% if turning_mind > 0 %}
+                    <span class="badge badge-pill badge-success">Turning the mind</span>
+                {% endif %}
+                {% if willingness > 0 %}
+                    <span class="badge badge-pill badge-success">Willingness</span>
+                {% endif %}
+                {% if allowing_mind > 0 %}
+                    <span class="badge badge-pill badge-success">Allowing the mind</span>
+                {% endif %}
+
+
+                <br><br>
+
+                <strong>Interpersonal effectiveness skills:</strong>
+                {% if objective_effectiveness > 0 %}
+                    <span class="badge badge-pill badge-success">Objective effectiveness</span>
+                {% endif %}
+                {% if relationship_effectiveness > 0 %}
+                    <span class="badge badge-pill badge-success">Relationship effectiveness</span>
+                {% endif %}
+                {% if selfrespect_effectiveness > 0 %}
+                    <span class="badge badge-pill badge-success">Self-respect effectiveness</span>
+                {% endif %}
+                {% if attending_relationships > 0 %}
+                    <span class="badge badge-pill badge-success">Attending to relationships</span>
+                {% endif %}
+
+            </div>
         </div>
     </div>
 
     <div class="col-md-6">
 
        <div class="blockbtnlist">
-           <button type="button" class="btn btn-primary btn-lg btn-block">View diary cards ></button>
-           <button type="button" class="btn btn-primary btn-lg btn-block">Update diary card ></button>
-           <button type="button" class="btn btn-primary btn-lg btn-block">Log skills used ></button>
-           <button type="button" class="btn btn-primary btn-lg btn-block">Refresh your skills ></button>
+           <button type="button" class="btn btn-primary btn-lg btn-block" onclick="location.href='/diarycard'">View diary card ></button>
+           <button type="button" class="btn btn-primary btn-lg btn-block" onclick="location.href='/updatecard'">Update diary card ></button>
+           <button type="button" class="btn btn-primary btn-lg btn-block" onclick="location.href='/updateskills'">Log skills used ></button>
+           <button type="button" class="btn btn-primary btn-lg btn-block" onclick="location.href='/tips'">Refresh your skills ></button>
        </div>
+
+    <div class="timeline">
+        <a class="twitter-timeline" data-lang="en" data-height="250" href="https://twitter.com/DrLinehan?ref_src=twsrc%5Etfw">Dr Marsha Linehan on Twitter:</a>
+        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    </div>
 
     </div>
 
 </div>
+
 {% endblock %}

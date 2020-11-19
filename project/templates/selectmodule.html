@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Select Module
+{% endblock %}
+{% block breadcrumbs %}
+<nav aria-label="breadcrumb" class="breadcrumbs">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="/">Dashboard</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Select your module</li>
+  </ol>
+</nav>
+{% endblock %}
+{% block main %}
+<div class="row align-items-center">
+  <div class="col">
+<h1 class="display">Select your module</h1>
+</div>
+</div>
+<div class="row align-items-center">
+  <div class="col">
+    <form action="/selectmodule" method="post">
+      <div class="list-group">
+        <input type="button" data-toggle="list" class="list-group-item list-group-item-action inbutton" name="cm" id="cm" value="Core Mindfulness">
+        <input type="button" data-toggle="list" class="list-group-item list-group-item-action inbutton" name="er" id="er" value="Emotion Regulation">
+        <input type="button" data-toggle="list" class="list-group-item list-group-item-action inbutton" name="dt" id="dt" value="Distress Tolerance">
+        <input type="button" data-toggle="list" class="list-group-item list-group-item-action inbutton" name="ie" id="ie" value="Interpersonal Effectiveness">
+      </div>
+  </div>
+</div>
+<div class="row align-items-center">
+<div class="col">
+<input type="submit" name="submit" class="btn btn-primary">
+</form>
+</div>
+</div>
+</div>
+
+{% endblock %}

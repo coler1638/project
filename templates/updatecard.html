@@ -1,0 +1,150 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Update Diary Card
+{% endblock %}
+{% block breadcrumbs %}
+<nav aria-label="breadcrumb" class="breadcrumbs">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="/diarycard">Diary Cards</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Make an entry</li>
+  </ol>
+</nav>
+{% endblock %}
+{% block main %}
+
+
+<h1 class="display">Update your Diary Card</h1>
+    <!-- start form -->
+    <form action="/updatecard" method="post" class="form-control wideform">
+
+        <div class="row align-items-left alignleft pad">
+            <div class="col-4">
+                <!-- date -->
+                <label for="date_input"><strong>Date:</strong></label>
+                <input type="date" value="2011-08-19" name="date_input" id="date_input">
+            </div>
+        </div>
+
+        <div class="row alignleft align-items-center pad">
+            <div class="col-6">
+                <!-- meds as prescribed? -->
+                <label for="meds" class="meds"><strong>Medication as prescribed?</strong></label>
+                <!-- yes radio -->
+                <div class="custom-control custom-radio custom-control-inline" id="meds" name="meds">
+                  <input type="radio" id="customRadioInline1" name="meds" class="custom-control-input">
+                  <label class="custom-control-label" for="customRadioInline1">Yes</label>
+                </div>
+                <!-- no radio -->
+                <div class="custom-control custom-radio custom-control-inline">
+                  <input type="radio" id="customRadioInline2" name="meds" class="custom-control-input">
+                  <label class="custom-control-label" for="customRadioInline2">No</label>
+                </div>
+            </div>
+            <div class="col-3">
+                <!-- sleep -->
+                <label for="sleep"><strong>Sleep: </strong></label>
+                <input type="text" id="sleep" name="sleep" class="form-control narrow" aria-describedby="sleepHelpInline">
+                <small id="sleepHelpInline" class="text-muted">
+                    hours
+                </small>
+            </div>
+            <div class="col-3">
+                <!-- dbt skills used -->
+                <label for="skills_used"><strong>DBT Skills used*: </strong></label>
+                <input type="text" id="skills_used" name="skills_used" class="form-control narrow">
+            </div>
+        </div>
+        <div class="row alignleft pad">
+             <div class="col-3">
+                 <p><strong>Emotions:</strong></p>
+                <!-- pain -->
+                <div class="d-flex justify-content-between">
+                <label for="pain">Pain (0-5):</label>
+                <input type="text" id="pain" name="pain" class="form-control narrow">
+                </div>
+                <br>
+                <!-- sad -->
+                <div class="d-flex justify-content-between">
+                <label for="sad">Sad (0-5):</label>
+                <input type="text" id="sad" name="sad" class="form-control narrow">
+                </div>
+                <br>
+                <!-- guilt -->
+                <div class="d-flex justify-content-between">
+                <label for="sad">Guilt (0-5):</label>
+                <input type="text" id="guilt" name="guilt" class="form-control narrow">
+                </div>
+                <br>
+                <!-- shame -->
+                <div class="d-flex justify-content-between">
+                <label for="shame">Shame (0-5):</label>
+                <input type="text" id="shame" name="shame" class="form-control narrow">
+                </div>
+                <br>
+                <!-- anger -->
+                <div class="d-flex justify-content-between">
+                <label for="anger">Anger (0-5):</label>
+                <input type="text" id="anger" name="anger" class="form-control narrow">
+                </div>
+                <br>
+                <!-- fear -->
+                <div class="d-flex justify-content-between">
+                <label for="fear">Fear (0-5):</label>
+                <input type="text" id="fear" name="fear" class="form-control narrow">
+                </div>
+                <br>
+                <!-- happy -->
+                <div class="d-flex justify-content-between">
+                <label for="happy">Happy (0-5):</label>
+                <input type="text" id="happy" name="happy" class="form-control narrow">
+                </div>
+                <br>
+            </div>
+            <div class="col-3">
+                <p><strong>Urges:</strong></p>
+                <!-- si urges -->
+                <div class="d-flex justify-content-between">
+                <label for="si_urges">Suicidal urges (0-5):</label>
+                <input type="text" id="si_urges" name="si_urges" class="form-control narrow">
+                </div>
+                <br>
+                <!-- Sh urges -->
+                <div class="d-flex justify-content-between">
+                <label for="sh_urges">Self-harm urges (0-5):</label>
+                <input type="text" id="sh_urges" name="sh_urges" class="form-control narrow">
+                </div>
+            </div>
+            <div class="col-6 d-flex align-items-end flex-column">
+                <table class="table-striped bigpad2">
+                    <thead class="thead-light text-center">
+                        <tr><th colspan="2">*DBT Skills Used:</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>0 = Not thought about or used</td>
+                            <td>1 = Thought about, not used, didn't want to</td>
+                        </tr>
+                        <tr>
+                            <td>2 = Thought about, not used, wanted to</td>
+                            <td>3 = Tried but couldn't use them</td>
+                        </tr>
+                        <tr>
+                            <td>4 = Tried, could do them but they didn't help</td>
+                            <td>5 = Tried, could do them, helped</td>
+                        </tr>
+                        <tr>
+                            <td>6 = Didn't try, used them, didn't help</td>
+                            <td>7 = Didn't try, used them, helped</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="mt-auto p-2"><input type="submit" class="btn btn-primary"></div>
+            </div>
+
+        </div>
+
+</form>
+
+
+{% endblock %}

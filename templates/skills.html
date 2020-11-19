@@ -1,0 +1,76 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Your DBT Skills
+{% endblock %}
+
+{% block main %}
+
+    <h1 class="display">Your DBT Skills</h1>
+    <table class="table">
+        <thead class="thead-light">
+            <th colspan="5">DBT Skills Used</th>
+        </thead>
+        <tr>
+            <th>Date</th>
+            <th>Core Mindfulness</th>
+            <th>Emotion Regulation</th>
+            <th>Distress Tolerance</th>
+            <th>Interpersonal Effectiveness</th>
+        </tr>
+        <tbody>
+            {% for row in rows %}
+        <tr>
+            <td>{{ row.date }}</td>
+            <td>
+                <span class="badge badge-pill badge-success">{{ row.wisemind }}</span>
+                <span class="badge badge-pill badge-success">{{ row.observe }}</span>
+                <span class="badge badge-pill badge-success">{{ row.describe }}</span>
+                <span class="badge badge-pill badge-success">{{ row.participate }}</span>
+                <span class="badge badge-pill badge-success">{{ row.nonjudgemental_stance }}</span>
+                <span class="badge badge-pill badge-success">{{ row.one_mindfully }}</span>
+                <span class="badge badge-pill badge-success">{{ row.effectively }}</span>
+            </td>
+            <td>
+                <span class="badge badge-pill badge-success">{{ row.identified_emotion }}</span>
+                <span class="badge badge-pill badge-success">{{ row.identified_emotion_function }}</span>
+                <span class="badge badge-pill badge-success">{{ row.check_facts }}</span>
+                <span class="badge badge-pill badge-success">{{ row.opposite_action }}</span>
+                <span class="badge badge-pill badge-success">{{ row.problem_solving }}</span>
+                <span class="badge badge-pill badge-success">{{ row.positives_short }}</span>
+                <span class="badge badge-pill badge-success">{{ row.positives_long }}</span>
+                <span class="badge badge-pill badge-success">{{ row.build_mastery }}</span>
+                <span class="badge badge-pill badge-success">{{ row.cope_ahead }}</span>
+                <span class="badge badge-pill badge-success">{{ row.reduce_vulnerability }}</span>
+                <span class="badge badge-pill badge-success">{{ row.mindfulness_emotion }}</span>
+
+            </td>
+            <td>
+                <span class="badge badge-pill badge-success">{{ row.stop_ }}</span>
+                <span class="badge badge-pill badge-success">{{ row.pros_cons }}</span>
+                <span class="badge badge-pill badge-success">{{ row.tipp }}</span>
+                <span class="badge badge-pill badge-success">{{ row.wm_accepts }}</span>
+                <span class="badge badge-pill badge-success">{{ row.self_soothing }}</span>
+                <span class="badge badge-pill badge-success">{{ row.improve }}</span>
+                <span class="badge badge-pill badge-success">{{ row.radical_acceptance }}</span>
+                <span class="badge badge-pill badge-success">{{ row.turning_mind }}</span>
+                <span class="badge badge-pill badge-success">{{ row.willingness }}</span>
+                <span class="badge badge-pill badge-success">{{ row.allowing_mind }}</span>
+            </td>
+            <td>
+                <span class="badge badge-pill badge-success">{{ row.objective_effectiveness }}</span>
+                <span class="badge badge-pill badge-success">{{ row.relationship_effectiveness }}</span>
+                <span class="badge badge-pill badge-success">{{ row.selfrespect_effectiveness }}</span>
+                <span class="badge badge-pill badge-success">{{ row.attending_relationships }}</span>
+            </td>
+
+        </tr>
+          {% endfor %}
+        </tbody>
+    </table>
+    <span class="content"><a class="btn btn-primary light-text" href="/updateskills">Make an entry ></button>
+    <a class="btn btn-primary light-text" href="/skillshistory">View history ></a>
+    <a class="btn btn-primary light-text" href="/tips">Get tips & tricks ></a>
+    </span>
+
+{% endblock %}
